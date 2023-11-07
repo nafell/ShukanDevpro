@@ -8,4 +8,5 @@
         <item>OT</item>
         <item>TH</item>
     </string-array>
+    <string name="toolbar_text">ToolBarText</string>
 </resources>
