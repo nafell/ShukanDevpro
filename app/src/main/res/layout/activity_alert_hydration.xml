@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <!-- タイトル -->
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="水分が不足しています。水分を補給しましょう。"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+    <!-- 本文 -->
+    <TextView
+        android:id="@+id/notification_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="水分量の推移"
+        android:textSize="14sp"/>
+    <!-- グラフの表示 -->
+<!--    <ImageView-->
+<!--        android:id="@+id/notification_graph"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/water_graph"-->
+<!--        android:scaleType="fitXY"/>-->
+</LinearLayout>

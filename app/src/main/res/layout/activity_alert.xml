@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.AlertScreentimeActivity">
+    <!-- タイトル -->
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="画面を長時間見過ぎています！"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+    <!-- 本文 -->
+    <TextView
+        android:id="@+id/notification_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下記の行動を推奨します。\n1. 10～15分間の休憩を取りましょう。\n2. 正しい姿勢で作業を行いましょう。\n3. 画面の明るさ・色味を夜間モードに切り替えましょう。"
+        android:textSize="14sp"/>
+</LinearLayout>
