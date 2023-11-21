@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.shukandevpro.UserViewModel
 import com.example.shukandevpro.databinding.FragmentDashboardBinding
+import com.example.shukandevpro.databinding.FragmentHomeBinding
 
 class DashboardFragment : Fragment() {
 
@@ -24,15 +26,15 @@ class DashboardFragment : Fragment() {
     ): View {
         val dashboardViewModel =
             ViewModelProvider(this).get(DashboardViewModel::class.java)
+        val userViewModel =
+            ViewModelProvider(this).get(UserViewModel::class.java)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        binding.vm = dashboardViewModel
+        binding.userVm = userViewModel
+        binding.lifecycleOwner = this
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {

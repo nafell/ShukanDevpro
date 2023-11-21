@@ -3,9 +3,18 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string-array name="project_contributors">
-        <item>KY</item>
-        <item>OT</item>
-        <item>TH</item>
-    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="login_welcome">ようこそ</string>
+    <string name="button_login">LOGIN</string>
+
+    <string name="home_welcome_morning">おはようございます、</string>
+    <string name="home_welcome_day">こんにちは、</string>
+    <string name="home_welcome_night">こんばんは、</string>
+    <string name="home_welcome_honorific">さん</string>
+    <string name="home_watch_name">ShukanWatch 3</string>
+    <string name="home_watch_battery">電池残量: 96%</string>
+    <string name="home_youractivity_title">あなたの活動：</string>
+    <string name="home_graph_hydration_title">水分補給：</string>
+    <string name="home_graph_screentime_title">画面凝視：</string>
 </resources>

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.shukandevpro.UserViewModel
 import com.example.shukandevpro.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -24,15 +25,16 @@ class HomeFragment : Fragment() {
     ): View {
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
+        val userViewModel =
+            ViewModelProvider(this).get(UserViewModel::class.java)
+
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        binding.vm = homeViewModel
+        binding.userVm = userViewModel
+        binding.lifecycleOwner = this
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {
